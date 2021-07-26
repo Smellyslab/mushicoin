@@ -15,7 +15,7 @@ let mainWindow;
 function createWindow() {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-      title: 'Halocoin', 
+      title: 'Mushicoin', 
       width: 900, 
       height: 660, 
       webPreferences: {webSecurity: false},
@@ -59,7 +59,7 @@ app.on('activate', function () {
 let pyProc = null;
 
 const createPyProc = () => {
-  let python_exec = path.join(__dirname, '../halocoin');
+  let python_exec = path.join(__dirname, '../mushicoin');
   console.log('Executable location: ' + python_exec);
   pyProc = require('child_process').spawn(python_exec, ['start']);
   if (pyProc != null) {

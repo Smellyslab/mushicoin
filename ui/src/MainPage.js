@@ -74,7 +74,7 @@ class MainPage extends Component {
     else if(this.state.page === 'mining') {
       currentPage = <Mining notify={this.props.notify} default_wallet={this.state.default_wallet} socket={this.props.socket} />
     }
-    let title = "Halocoin";
+    let title = "Mushicoin";
     if(this.state.default_wallet !== null) {
       title += " - " + this.state.default_wallet.name;
     }

@@ -3,13 +3,13 @@ FROM ubuntu:17.04
 RUN apt-get update --fix-missing -y
 RUN apt-get -y install software-properties-common git python3-pip
 
-RUN mkdir /halocoin
-WORKDIR /halocoin
+RUN mkdir /mushicoin
+WORKDIR /mushicoin
 
 ADD requirements.txt .
 RUN pip3 install -r requirements.txt
 
-ADD . /halocoin
+ADD . /mushicoin
 RUN pip3 install .
 
 VOLUME /data

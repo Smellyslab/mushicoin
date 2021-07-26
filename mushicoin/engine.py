@@ -134,7 +134,7 @@ def main(config, working_dir):
     global instance
     instance = Engine(config, working_dir)
     if instance.register():
-        print("Halocoin is fully running...")
+        print("Mushicoin is fully running...")
         signal.signal(signal.SIGINT, signal_handler)
         instance.join()
         print("Shutting down gracefully")

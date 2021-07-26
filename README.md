@@ -1,4 +1,4 @@
-Halocoin
+Mushicoin
 =============
 
 *In development*
@@ -7,7 +7,7 @@ Halocoin
 
 ## What is this?
 
-Halocoin is my personal project to learn, experiment and build around blockchain technology. This project is by no means production ready or close to actual implementation of Bitcoin protocol.
+Mushicoin is my personal project to learn, experiment and build around blockchain technology. This project is by no means production ready or close to actual implementation of Bitcoin protocol.
 However, I have tried to imitate what is proposed in Bitcoin white paper. For example, it is still missing Merkle Trees for transactions which is a core property of Bitcoin.
 
 Although source code is not related to original repository anymore and I already removed the fork tag, I want to acknowledge my initial start point. I thank zack-bitcoin for putting effort into
@@ -31,14 +31,14 @@ Blockchain services include:
 
 ## Getting started
 
-Halocoin is packaged according to distutils guidelines that is supported by PyPI. As like any other python project,
+Mushicoin is packaged according to distutils guidelines that is supported by PyPI. As like any other python project,
 I recommend you to install this on a virtualenv.
 
-Also, Halocoin only works and tested on Python 3 and above.
+Also, Mushicoin only works and tested on Python 3 and above.
 
 ```
-git clone https://github.com/halilozercan/halocoin
-cd halocoin
+git clone https://github.com/halilozercan/mushicoin
+cd mushicoin
 virtualenv venv -p python3
 source venv/bin/activate
 python3 setup.py install
@@ -47,33 +47,33 @@ python3 setup.py install
 or
 
 ```
-pip install halocoin
+pip install mushicoin
 ```
 
 ## How to run
 
-```cli.py``` module offers a cool CLI to interact with the blockchain engine. When you install this package, you can call this module by 'halocoin' executable.
+```cli.py``` module offers a cool CLI to interact with the blockchain engine. When you install this package, you can call this module by 'mushicoin' executable.
 However, this CLI does not daemonize the engine when you start it. Instead users are free to choose from any daemonization methods that they
 prefer (supervisor, nohup, screen, etc..)
 
 You can start the client by running
 
 ```
-halocoin start
+mushicoin start
 ```
 
 Every service associated with blockchain runs at startup. This implies that your client will immediately start synchronizing with p2p network.
 Initial peer list is hard-coded into client but you can update this list by updating your config file. Config file can be specified at startup or can be edited manually after first start.
-Default data folder is inside your home directory and named ```.halocoin```. You can defined another data folder by ```--dir``` option. Details of CLI are given above.
+Default data folder is inside your home directory and named ```.mushicoin```. You can defined another data folder by ```--dir``` option. Details of CLI are given above.
 
 ## How to use
 
-As mentioned, halocoin comes with a minimalistic CLI but all it does is converting your command lines request into HTTP requests. Then, it sends these requests
+As mentioned, mushicoin comes with a minimalistic CLI but all it does is converting your command lines request into HTTP requests. Then, it sends these requests
 to the running Restful API. If you prefer, you can use this API with another client.
 
 To interact with blockchain, you need to have an account, a wallet. You can create a wallet by running
 ```
-halocoin new_wallet --wallet wallet_name
+mushicoin new_wallet --wallet wallet_name
 ```
 
 or by making an HTTP request to (GET or POST)
@@ -133,7 +133,7 @@ Query Parameters:
 #### Send
 ```http://localhost:7001/send```
 
-Send halocoins to another address.
+Send mushicoins to another address.
 
 Query Parameters:
 - address : String

@@ -1,2 +1,2 @@
-recursive-include halocoin/templates *
-recursive-include halocoin/static *
+recursive-include mushicoin/templates *
+recursive-include mushicoin/static *

@@ -3,7 +3,7 @@ build
 dist
 *egg-info*
 ui
-halocoin/build
-halocoin/dist
-halocoin/venv
+mushicoin/build
+mushicoin/dist
+mushicoin/venv
 *.spec

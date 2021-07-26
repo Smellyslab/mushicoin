@@ -9,7 +9,7 @@ setup(
     description='Experimental blockchain',
     author='Smelly',
     author_email='ilike2code1234@gmail.com',
-    url='https://github.com/halilozercan/halocoin',
+    url='https://github.com/smellyslab/mushicoin',
     entry_points={
         'console_scripts': [
             'mushicoin = mushicoin.cli:main'
