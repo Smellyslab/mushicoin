@@ -37,7 +37,7 @@ I recommend you to install this on a virtualenv.
 Also, Mushicoin only works and tested on Python 3 and above.
 
 ```
-git clone https://github.com/halilozercan/mushicoin
+git clone https://github.com/smellyslab/mushicoin
 cd mushicoin
 virtualenv venv -p python3
 source venv/bin/activate
@@ -141,3 +141,5 @@ Query Parameters:
 - wallet_name : String
 - password : String
 - message : String optional
+
+ 
