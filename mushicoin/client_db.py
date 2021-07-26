@@ -4,8 +4,8 @@ import sys
 
 import plyvel
 
-from halocoin import tools, api, custom
-from halocoin.service import lockit
+from mushicoin import tools, api, custom
+from mushicoin.service import lockit
 
 
 class ClientDB:
@@ -249,7 +249,7 @@ class ClientDB:
     @lockit('wallets')
     def set_default_wallet(self, wallet_name, password):
         try:
-            from halocoin.model.wallet import Wallet
+            from mushicoin.model.wallet import Wallet
             encrypted_wallet_content = self.get_wallet(wallet_name)
             wallet = Wallet.from_string(tools.decrypt(password, encrypted_wallet_content))
             if wallet.name == wallet_name:

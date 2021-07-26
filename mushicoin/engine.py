@@ -4,16 +4,16 @@ import time
 
 import psutil
 
-from halocoin import api
-from halocoin import tools
-from halocoin.blockchain import BlockchainService
-from halocoin.client_db import ClientDB
-from halocoin.database import KeyValueStore
-from halocoin.miner import MinerService
-from halocoin.peer_check import PeerCheckService
-from halocoin.peer_listen import PeerListenService
-from halocoin.service import Service, async, threaded
-from halocoin.state import StateDatabase
+from mushicoin import api
+from mushicoin import tools
+from mushicoin.blockchain import BlockchainService
+from mushicoin.client_db import ClientDB
+from mushicoin.database import KeyValueStore
+from mushicoin.miner import MinerService
+from mushicoin.peer_check import PeerCheckService
+from mushicoin.peer_listen import PeerListenService
+from mushicoin.service import Service, async, threaded
+from mushicoin.state import StateDatabase
 
 
 def test_database(db):
@@ -54,7 +54,7 @@ class Engine(Service):
         self.miner = MinerService(self)
 
     def on_register(self):
-        print('Starting halocoin')
+        print('Starting mushicoin')
 
         if not test_database(self.db):
             tools.log("Database service is not working.")
@@ -139,4 +139,4 @@ def main(config, working_dir):
         instance.join()
         print("Shutting down gracefully")
     else:
-        print("Couldn't start halocoin")
+        print("Couldn't start mushicoin")

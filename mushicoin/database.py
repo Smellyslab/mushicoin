@@ -5,8 +5,8 @@ import threading
 
 import plyvel
 
-from halocoin import tools, custom
-from halocoin.service import lockit
+from mushicoin import tools, custom
+from mushicoin.service import lockit
 
 
 class KeyValueStore:

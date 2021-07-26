@@ -3,11 +3,11 @@ import socket
 import sys
 import uuid
 
-from halocoin import ntwrk, custom
-from halocoin import tools
-from halocoin.client_db import ClientDB
-from halocoin.ntwrk import Message
-from halocoin.service import Service, threaded, sync
+from mushicoin import ntwrk, custom
+from mushicoin import tools
+from mushicoin.client_db import ClientDB
+from mushicoin.ntwrk import Message
+from mushicoin.service import Service, threaded, sync
 
 
 class PeerListenService(Service):

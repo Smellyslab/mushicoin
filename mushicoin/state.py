@@ -1,7 +1,7 @@
 import copy
 
-from halocoin import tools
-from halocoin.service import lockit
+from mushicoin import tools
+from mushicoin.service import lockit
 
 
 class StateDatabase:

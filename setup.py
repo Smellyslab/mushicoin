@@ -4,15 +4,15 @@ from distutils.core import setup
 from setuptools import find_packages
 
 setup(
-    name='Halocoin',
+    name='Mushicoin',
     version='0.0.2',
     description='Experimental blockchain',
-    author='H. Ibrahim Ozercan',
-    author_email='halilozercan@gmail.com',
+    author='Smelly',
+    author_email='ilike2code1234@gmail.com',
     url='https://github.com/halilozercan/halocoin',
     entry_points={
         'console_scripts': [
-            'halocoin = halocoin.cli:main'
+            'mushicoin = mushicoin.cli:main'
         ],
     },
     include_package_data=True,

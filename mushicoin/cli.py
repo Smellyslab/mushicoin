@@ -8,9 +8,9 @@ from pprint import pprint
 
 import requests
 
-from halocoin import custom
-from halocoin import engine
-from halocoin import tools
+from mushicoin import custom
+from mushicoin import engine
+from mushicoin import tools
 
 
 class Colors:
@@ -26,7 +26,7 @@ class Colors:
 
 actions = dict()
 connection_port = 7899
-host = os.environ.get('HALOCOIN_API_HOST', 'localhost')
+host = os.environ.get('MUSHICOIN_API_HOST', 'localhost')
 
 
 def action(func):
@@ -240,7 +240,7 @@ def mempool():
 
 
 def run(argv):
-    parser = argparse.ArgumentParser(description='CLI for halocoin.')
+    parser = argparse.ArgumentParser(description='CLI for mushicoin.')
     parser.add_argument('action', choices=sorted(actions.keys()),
                         help="Main action to perform by this CLI.")
     parser.add_argument('--version', action='version', version='%(prog)s ' + custom.version)
@@ -263,7 +263,7 @@ def run(argv):
     parser.add_argument('--pw', action="store", type=str, dest='pw',
                         help='NOT RECOMMENDED! If you want to pass wallet password as argument.')
     parser.add_argument('--dir', action="store", type=str, dest='dir',
-                        help='Directory for halocoin to use.')
+                        help='Directory for mushicoin to use.')
     parser.add_argument('--port', action="store", type=int, dest='port',
                         help='Override API port defined in config file.')
     parser.add_argument('--force', action="store_true", dest='force',

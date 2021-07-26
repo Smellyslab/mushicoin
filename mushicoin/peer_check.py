@@ -1,9 +1,9 @@
 import time
 
-from halocoin import blockchain
-from halocoin import ntwrk
-from halocoin import tools
-from halocoin.service import Service, threaded, sync
+from mushicoin import blockchain
+from mushicoin import ntwrk
+from mushicoin import tools
+from mushicoin.service import Service, threaded, sync
 
 
 class PeerCheckService(Service):

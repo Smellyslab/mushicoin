@@ -10,9 +10,9 @@ from engineio import async_threading
 from flask import Flask, request, Response, send_file
 from flask_socketio import SocketIO
 
-from halocoin import tools, engine, custom
-from halocoin.blockchain import BlockchainService
-from halocoin.service import Service
+from mushicoin import tools, engine, custom
+from mushicoin.blockchain import BlockchainService
+from mushicoin.service import Service
 
 async_threading  # PyCharm automatically removes unused imports. This prevents it
 
@@ -56,7 +56,7 @@ def run():
         socketio.run(app, host=host, port=engine.instance.config['port']['api'])
 
     global listen_thread
-    host = os.environ.get('HALOCOIN_API_HOST', "localhost")
+    host = os.environ.get('MUSHICOIN_API_HOST', "localhost")
     listen_thread = threading.Thread(target=thread_target, daemon=True)
     listen_thread.start()
     print("Started API on {}:{}".format(host, engine.instance.config['port']['api']))
@@ -112,7 +112,7 @@ def download_wallet():
 
 @app.route('/info_wallet', methods=['GET', 'POST'])
 def info_wallet():
-    from halocoin.model.wallet import Wallet
+    from mushicoin.model.wallet import Wallet
     wallet_name = request.values.get('wallet_name', None)
     password = request.values.get('password', None)
     if wallet_name is None:
@@ -141,7 +141,7 @@ def info_wallet():
 
 @app.route('/remove_wallet', methods=['GET', 'POST'])
 def remove_wallet(wallet):
-    from halocoin.model.wallet import Wallet
+    from mushicoin.model.wallet import Wallet
     wallet_name = request.values.get('wallet_name', None)
     password = request.values.get('password', None)
     default_wallet = engine.instance.clientdb.get_default_wallet()
@@ -174,7 +174,7 @@ def remove_wallet(wallet):
 
 @app.route('/new_wallet', methods=['GET', 'POST'])
 def new_wallet():
-    from halocoin.model.wallet import Wallet
+    from mushicoin.model.wallet import Wallet
     wallet_name = request.values.get('wallet_name', None)
     pw = request.values.get('password', None)
     set_default = request.values.get('set_default', None)
@@ -230,7 +230,7 @@ def set_default_wallet():
 @app.route('/history', methods=['GET', 'POST'])
 # @blockchain_synced
 def history():
-    from halocoin.model.wallet import Wallet
+    from mushicoin.model.wallet import Wallet
     address = request.values.get('address', None)
     if address is None:
         default_wallet = engine.instance.clientdb.get_default_wallet()
@@ -261,7 +261,7 @@ def history():
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
-    from halocoin.model.wallet import Wallet
+    from mushicoin.model.wallet import Wallet
     amount = int(request.values.get('amount', 0))
     address = request.values.get('address', None)
     message = request.values.get('message', '')
@@ -376,7 +376,7 @@ def difficulty():
 @app.route('/balance', methods=['GET', 'POST'])
 # @blockchain_synced
 def balance():
-    from halocoin.model.wallet import Wallet
+    from mushicoin.model.wallet import Wallet
     address = request.values.get('address', None)
     if address is None:
         default_wallet = engine.instance.clientdb.get_default_wallet()
@@ -402,7 +402,7 @@ def stop():
 
 @app.route('/start_miner', methods=['GET', 'POST'])
 def start_miner():
-    from halocoin.model.wallet import Wallet
+    from mushicoin.model.wallet import Wallet
     wallet_name = request.values.get('wallet_name', None)
     password = request.values.get('password', None)
 

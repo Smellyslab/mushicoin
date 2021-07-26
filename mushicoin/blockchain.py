@@ -3,10 +3,10 @@ import threading
 import time
 from cdecimal import Decimal
 
-from halocoin import custom, api
-from halocoin import tools
-from halocoin.ntwrk import Response
-from halocoin.service import Service, threaded, sync, NoExceptionQueue, lockit
+from mushicoin import custom, api
+from mushicoin import tools
+from mushicoin.ntwrk import Response
+from mushicoin.service import Service, threaded, sync, NoExceptionQueue, lockit
 
 
 class BlockchainService(Service):

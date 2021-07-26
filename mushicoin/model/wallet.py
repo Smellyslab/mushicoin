@@ -5,7 +5,7 @@ from ecdsa import SECP256k1
 from ecdsa import SigningKey
 from ecdsa.util import randrange_from_seed__trytryagain
 
-from halocoin import tools
+from mushicoin import tools
 
 
 class Wallet:

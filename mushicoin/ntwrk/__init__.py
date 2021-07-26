@@ -1,8 +1,8 @@
 import socket
 import uuid
 
-from halocoin.ntwrk.message import Message
-from halocoin.ntwrk.response import Response
+from mushicoin.ntwrk.message import Message
+from mushicoin.ntwrk.response import Response
 
 MAX_MESSAGE_SIZE = 1024
 
@@ -102,7 +102,7 @@ def command(peer, message, node_id):
     :param message: message to be sent
     :return: received response or error
     """
-    from halocoin import custom
+    from mushicoin import custom
     sock = connect(peer[0], peer[1], timeout=1)
     if sock is not None:
         message_id = uuid.uuid4()

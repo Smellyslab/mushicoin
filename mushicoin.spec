@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['halocoin/cli.py'],
+a = Analysis(['mushicoin/cli.py'],
              pathex=['.'],
              binaries=[],
              datas=[],
@@ -21,7 +21,7 @@ exe = EXE(pyz,
           a.binaries,
           a.zipfiles,
           a.datas,
-          name='halocoin',
+          name='mushicoin',
           debug=False,
           strip=False,
           upx=True,

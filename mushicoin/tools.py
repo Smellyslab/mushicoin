@@ -8,7 +8,7 @@ import time
 
 import yaml
 
-from halocoin import custom
+from mushicoin import custom
 
 alphabet = '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'
 
@@ -30,8 +30,8 @@ def init_logging(DEBUG, working_dir, log_file):
 def get_default_dir():
     from os.path import expanduser
     home = expanduser("~")
-    default_dir = os.path.join(home, '.halocoin')
-    return os.environ.get("HALOCOIN_DATA_DIR", default_dir)
+    default_dir = os.path.join(home, '.mushicoin')
+    return os.environ.get("MUSHICOIN_DATA_DIR", default_dir)
 
 
 def log(message):

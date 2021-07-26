@@ -3,8 +3,8 @@ import sys
 import threading
 import traceback
 
-from halocoin import tools
-from halocoin.ntwrk.message import Order
+from mushicoin import tools
+from mushicoin.ntwrk.message import Order
 
 
 class NoExceptionQueue(queue.Queue):

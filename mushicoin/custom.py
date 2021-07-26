@@ -2,7 +2,7 @@ import os
 from cdecimal import Decimal
 
 version = "0.0013"
-block_reward = 500  # Initial block reward
+block_reward = 500 # Initial block reward
 miner_core_count = -1  # -1 evaluates to number of cores
 # Lower limits on what the "time" tag in a block can say.
 median_block_time_limit = 100
@@ -32,7 +32,7 @@ def generate_default_config():
     config['DEBUG'] = False
     config['database'] = {
         "type": "sql",
-        "location": "halocoin.db"
+        "location": "mushicoin.db"
     }
 
     config['logging'] = {
@@ -40,8 +40,8 @@ def generate_default_config():
     }
 
     config["port"] = {
-        "api": int(os.environ.get('HALOCOIN_API_PORT', '7001')),
-        "peers": int(os.environ.get('HALOCOIN_PEERS_PORT', '7002'))
+        "api": int(os.environ.get('MUSHICOIN_API_PORT', '7001')),
+        "peers": int(os.environ.get('MUSHICOIN_PEERS_PORT', '7002'))
     }
 
     config["peers"] = {

@@ -3,10 +3,10 @@ import random
 import time
 from multiprocessing import Process
 
-from halocoin import custom, api
-from halocoin import tools
-from halocoin.blockchain import BlockchainService
-from halocoin.service import Service, threaded, lockit
+from mushicoin import custom, api
+from mushicoin import tools
+from mushicoin.blockchain import BlockchainService
+from mushicoin.service import Service, threaded, lockit
 
 
 class MinerService(Service):
